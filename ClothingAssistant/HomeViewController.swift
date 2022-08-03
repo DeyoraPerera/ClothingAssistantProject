@@ -11,7 +11,8 @@ class HomeViewController: UIViewController {
 
     @IBAction func AddClothingButtonPressed(_ sender: AnyObject) {
         print("Button pressed")
-        self.performSegue(withIdentifier: "AddClothesViewSeague", sender: self)
+        self.performSegue(withIdentifier: "LaundryViewSeague", sender: self)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,11 @@ class HomeViewController: UIViewController {
         
         print("View has loaded")
     }
-
-
+    
+    
+    @IBAction func AddViewButtonPressed(_ sender: Any) {
+        print(" add view button pressed")
+        self.performSegue(withIdentifier: "AddScreenSegue", sender: self)
+    }
 }
 

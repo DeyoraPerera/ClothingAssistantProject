@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F4BC0AA288B74B80096ABA5 /* ClothingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4BC0A9288B74B80096ABA5 /* ClothingViewController.swift */; };
+		8FABCE22288C9CA800D935DE /* PhotoTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FABCE21288C9CA800D935DE /* PhotoTopCell.swift */; };
+		8FABCE24288C9CBC00D935DE /* PhotoBottomsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FABCE23288C9CBC00D935DE /* PhotoBottomsCell.swift */; };
 		8FCE57A62889BC3900A2F59A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE57A52889BC3900A2F59A /* AppDelegate.swift */; };
 		8FCE57A82889BC3900A2F59A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE57A72889BC3900A2F59A /* SceneDelegate.swift */; };
 		8FCE57AA2889BC3900A2F59A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE57A92889BC3900A2F59A /* HomeViewController.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F4BC0A9288B74B80096ABA5 /* ClothingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingViewController.swift; sourceTree = "<group>"; };
+		8FABCE21288C9CA800D935DE /* PhotoTopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTopCell.swift; sourceTree = "<group>"; };
+		8FABCE23288C9CBC00D935DE /* PhotoBottomsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBottomsCell.swift; sourceTree = "<group>"; };
 		8FCE57A22889BC3900A2F59A /* ClothingAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClothingAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FCE57A52889BC3900A2F59A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FCE57A72889BC3900A2F59A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,12 +69,15 @@
 				8FCE57A52889BC3900A2F59A /* AppDelegate.swift */,
 				8FCE57A72889BC3900A2F59A /* SceneDelegate.swift */,
 				8FCE57A92889BC3900A2F59A /* HomeViewController.swift */,
+				8FCE57BB2889CCDB00A2F59A /* AddClothesViewController.swift */,
+				8F4BC0A9288B74B80096ABA5 /* ClothingViewController.swift */,
 				8FCE57AE2889BC3C00A2F59A /* Assets.xcassets */,
 				8FCE57B02889BC3C00A2F59A /* LaunchScreen.storyboard */,
 				8FCE57B32889BC3C00A2F59A /* Info.plist */,
-				8FCE57BB2889CCDB00A2F59A /* AddClothesViewController.swift */,
 				8FCE57BD2889FA8400A2F59A /* Main.storyboard */,
 				8FF7B1F1288A25D700F9EF3A /* PhotoCell.swift */,
+				8FABCE21288C9CA800D935DE /* PhotoTopCell.swift */,
+				8FABCE23288C9CBC00D935DE /* PhotoBottomsCell.swift */,
 			);
 			path = ClothingAssistant;
 			sourceTree = "<group>";
@@ -145,7 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FCE57AA2889BC3900A2F59A /* HomeViewController.swift in Sources */,
+				8FABCE22288C9CA800D935DE /* PhotoTopCell.swift in Sources */,
 				8FF7B1F2288A25D700F9EF3A /* PhotoCell.swift in Sources */,
+				8FABCE24288C9CBC00D935DE /* PhotoBottomsCell.swift in Sources */,
+				8F4BC0AA288B74B80096ABA5 /* ClothingViewController.swift in Sources */,
 				8FCE57A62889BC3900A2F59A /* AppDelegate.swift in Sources */,
 				8FCE57A82889BC3900A2F59A /* SceneDelegate.swift in Sources */,
 				8FCE57BC2889CCDB00A2F59A /* AddClothesViewController.swift in Sources */,
@@ -285,6 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -313,6 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

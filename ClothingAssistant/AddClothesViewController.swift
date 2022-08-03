@@ -12,29 +12,32 @@ import PhotosUI
 class AddClothesViewController: UIViewController {
 
     @IBOutlet weak var photoCollectionView: UICollectionView!
-    var topClothesArray = [UIImage]()
-    var bottomClothesArray = [UIImage]()
+    //var topClothesArray = [UIImage]()
+    //var bottomClothesArray = [UIImage]()
+    var topClothesArray = [UIImage(named: "bottomImage1"), UIImage(named: "bottomImage2"), UIImage(named:"topImage3") ]
     
-    @IBAction func BackHomeButtonPressed(_ sender: Any) {
+    @IBAction func InAddClothesScreenHomeButtonPressed(_ sender: Any) {
         print("BackHome button pressed")
-        self.performSegue(withIdentifier: "HomeSeague", sender: self)
+        self.performSegue(withIdentifier: "LaundryHomeSeague", sender: self)
     }
     
     
-   
+    //print("\(topClothesArray.count)")
     
     @IBAction func addPhotoButtonPressed(_ sender: UIBarButtonItem) {
         var config = PHPickerConfiguration()
-        config.selectionLimit = 3
+        config.selectionLimit = 0
         
         let phPickerVC = PHPickerViewController(configuration: config)
         phPickerVC.delegate = self
         self.present(phPickerVC, animated: true)
+        
+        
     }
     
     //bottoms func here
     
-    
+   
     
     
     override func viewDidLoad() {
@@ -61,6 +64,8 @@ extension AddClothesViewController: PHPickerViewControllerDelegate{
         }
     }
 }
+
+
 extension AddClothesViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -78,23 +83,32 @@ extension AddClothesViewController: UICollectionViewDataSource{
     }
     }
 //scrolling code, if uncodded will show scrolling
-/*
+
 extension AddClothesViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = UIScreen.main.bounds
-        return CGSize(width: size.width, height: size.height)
+        //let size = collectionView.frame.size
+        //return CGSize(width: size.width, height: size.height)
+        
+        
+        CGSize(width: collectionView.frame.size.width / 3 - 2, height: collectionView.frame.size.height / 5 - 2)
     }
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+            return 0
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+            return 0
+        }
+        
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    
+   /* func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
+    }*/
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
+   
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
 }
-*/
+
+
